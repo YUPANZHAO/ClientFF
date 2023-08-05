@@ -1,9 +1,10 @@
 find_package(Qt6 6.5 COMPONENTS Quick Gui REQUIRED)
+find_package(FramelessHelper REQUIRED COMPONENTS Core Quick)
 
 qt_standard_project_setup(REQUIRES 6.5)
 
 # 获取CPP
-file(GLOB_RECURSE CPP_FILES *.cpp *h)
+file(GLOB_RECURSE CPP_FILES *.cpp *.h)
 
 # 获取QML
 file(GLOB_RECURSE QML_PATHS *.qml)
@@ -43,5 +44,7 @@ qt_add_qml_module( ${PROJECT_NAME}
 
 # 链接库
 target_link_libraries(${PROJECT_NAME} PRIVATE 
-    Qt6::Gui 
-    Qt6::Quick)
+    Qt6::Gui
+    Qt6::Quick
+    FramelessHelper::Core
+    FramelessHelper::Quick)
