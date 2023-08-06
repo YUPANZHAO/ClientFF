@@ -3,6 +3,8 @@
 #include <QQmlApplicationEngine>
 #include <framelessconfig_p.h>
 
+#include "ClientFF.h"
+
 FRAMELESSHELPER_USE_NAMESPACE
 
 int main(int argc, char *argv[]) {
@@ -17,6 +19,7 @@ int main(int argc, char *argv[]) {
   QQmlApplicationEngine engine;
 
   FramelessHelper::Quick::registerTypes(&engine);
+  ClientFF::registerTypes(&engine);
 
   const QUrl url(QStringLiteral("qrc:/ClientFF/qml/main.qml"));
   QObject::connect(

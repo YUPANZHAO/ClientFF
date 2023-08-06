@@ -48,3 +48,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     Qt6::Quick
     FramelessHelper::Core
     FramelessHelper::Quick)
+
+# 拷贝配置文件到执行目录
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory "${PROJECT_SOURCE_DIR}/config" "$<TARGET_FILE_DIR:${PROJECT_NAME}>/config")

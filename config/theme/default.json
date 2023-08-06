@@ -1,0 +1,11 @@
+{
+  "empty": "transparent",
+  "bg": "#F2F2F2",
+  "bg_strong": "#EBEBEB",
+  "bg_light": "#FFFFFF",
+  "icon_bg_normal": "transparent",
+  "icon_bg_hover": "#EBEBEB",
+  "icon_bg_highlight": "#E0E0E0",
+  "red": "#C42B1C",
+  "red_strong": "#C70039"
+}
