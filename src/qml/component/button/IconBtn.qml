@@ -1,15 +1,21 @@
 import QtQuick
+import Qt5Compat.GraphicalEffects
 
 Item {
   id: iconBtn
   
   property var size: 30
   property var icon: ""
-  property var iconSize: size * 0.6
+  property var iconSize: size * 0.5
   property var radius: 0
+  property var isChecked: false
+  property var showBg: true
   property var normalBgColor: _COLOR_.getColor("icon_bg_normal")
   property var hoverBgColor: _COLOR_.getColor("icon_bg_hover")
   property var highlightBgColor: _COLOR_.getColor("icon_bg_highlight")
+  property var showHighlight: false
+  property var iconNoramlColor: _COLOR_.getColor("icon_normal")
+  property var iconHighlightColor: _COLOR_.getColor("icon_highlight")
 
   readonly property var isHover: area.containsMouse
   readonly property var isPressed: area.pressed
@@ -24,24 +30,33 @@ Item {
 
   Rectangle {
     anchors.fill: parent
-    color: isPressed ? highlightBgColor : isHover ? hoverBgColor : normalBgColor
+    color: isChecked || isPressed ? highlightBgColor : isHover ? hoverBgColor : normalBgColor
     radius: iconBtn.radius
+    visible: showBg
   }
 
   Image {
+    id: iconImage
     anchors.centerIn: parent
     source: icon
     sourceSize.width: iconSize
     sourceSize.height: iconSize
+    visible: false
+  }
+
+  ColorOverlay {
+    anchors.fill: iconImage
+    source: iconImage
+    color: isChecked || (showHighlight && isHover) ? iconHighlightColor : iconNoramlColor
   }
 
   MouseArea {
     id: area
     anchors.fill: parent
     hoverEnabled: true
-    onClicked: iconBtn.clicked(mouse)
-    onDoubleClicked: iconBtn.doubleClicked(mouse)
-    onPressed: iconBtn.pressed(mouse)
-    onReleased: iconBtn.released(mouse)
+    onClicked: (mouse) => { iconBtn.clicked(mouse) }
+    onDoubleClicked: (mouse) => { iconBtn.doubleClicked(mouse) }
+    onPressed: (mouse) => { iconBtn.pressed(mouse) }
+    onReleased: (mouse) => { iconBtn.released(mouse) }
   }
 }

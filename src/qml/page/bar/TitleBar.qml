@@ -36,7 +36,7 @@ Item {
       id: minimizeButton
       size: parent.height
       width: size * 1.2
-      icon: "qrc:/ClientFF/res/icon/window-minimize.svg"
+      icon: _RES_ICON_("window-minimize.svg")
       iconSize: 13
       onClicked: window.showMinimized()
     }
@@ -44,7 +44,7 @@ Item {
       id: maximizeButton
       size: parent.height
       width: size * 1.2
-      icon: "qrc:/ClientFF/res/icon/window-%1.svg".arg(window.visibility === Window.Maximized ? "restore" : "maximize")
+      icon: _RES_ICON_("window-%1.svg".arg(window.visibility === Window.Maximized ? "restore" : "maximize"))
       iconSize: 10
       onClicked: {
         if(window.visibility === Window.Maximized) {
@@ -60,7 +60,7 @@ Item {
       width: size * 1.2
       hoverBgColor: _COLOR_.getColor("red")
       highlightBgColor: _COLOR_.getColor("red_strong")
-      icon: "qrc:/ClientFF/res/icon/window-close.svg"
+      icon: _RES_ICON_("window-close.svg")
       iconSize: 10
       onClicked: {
         window.close()
