@@ -1,4 +1,5 @@
 {
+  "theme": "#0099FF",
   "empty": "transparent",
   "bg": "#F8F8F8",
   "bg_strong": "#F2F2F2",
@@ -10,5 +11,6 @@
   "red_strong": "#C70039",
   "icon_normal": "#000000",
   "icon_highlight": "#0099FF",
-  "white": "#FFFFFF"
+  "white": "#FFFFFF",
+  "box_bg_color": "#F5F5F5"
 }

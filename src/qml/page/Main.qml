@@ -1,4 +1,5 @@
 import QtQuick
+import QtQuick.Controls
 import org.wangwenx190.FramelessHelper
 
 import "./bar"
@@ -10,6 +11,11 @@ Window {
   height: 600
   minimumWidth: 700
   minimumHeight: 450
+
+  Pane {
+    anchors.fill: parent
+    focusPolicy: Qt.ClickFocus
+  }
 
   FramelessHelper.onReady: {
     FramelessHelper.moveWindowToDesktopCenter()

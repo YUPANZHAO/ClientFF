@@ -1,6 +1,8 @@
 import QtQuick
 import Qt5Compat.GraphicalEffects
 
+import "../image"
+
 Item {
   id: iconBtn
   
@@ -30,23 +32,16 @@ Item {
 
   Rectangle {
     anchors.fill: parent
-    color: isChecked || isPressed ? highlightBgColor : isHover ? hoverBgColor : normalBgColor
+    color: isChecked ? hoverBgColor : isPressed ? highlightBgColor : isHover ? hoverBgColor : normalBgColor
     radius: iconBtn.radius
     visible: showBg
   }
 
-  Image {
+  ImageSvg {
     id: iconImage
     anchors.centerIn: parent
-    source: icon
-    sourceSize.width: iconSize
-    sourceSize.height: iconSize
-    visible: false
-  }
-
-  ColorOverlay {
-    anchors.fill: iconImage
-    source: iconImage
+    image: icon
+    size: iconSize
     color: isChecked || (showHighlight && isHover) ? iconHighlightColor : iconNoramlColor
   }
 
