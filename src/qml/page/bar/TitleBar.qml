@@ -23,7 +23,7 @@ Item {
 
   Rectangle {
     anchors.fill: parent
-    color: _COLOR_.getColor("bg")
+    color: _THEME_.getColor("bg")
   }
 
   Row {
@@ -58,8 +58,8 @@ Item {
       id: closeButton
       size: parent.height
       width: size * 1.2
-      hoverBgColor: _COLOR_.getColor("red")
-      highlightBgColor: _COLOR_.getColor("red_strong")
+      hoverBgColor: _THEME_.getColor("red")
+      highlightBgColor: _THEME_.getColor("red_strong")
       icon: _RES_ICON_("window-close.svg")
       iconSize: 10
       onClicked: {

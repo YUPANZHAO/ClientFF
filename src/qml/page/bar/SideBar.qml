@@ -1,35 +1,24 @@
 import QtQuick
 import QtQuick.Layouts
 
+import "../../../qml"
 import "../../component/button"
 
 Item {
   id: sideBar
-  
-  enum Page {
-    HOME,
-    USER,
-    FILE,
-    EMAIL
-  }
-
-  enum Menu {
-    SETTING,
-    SHARE
-  }
 
   property var pageIcons: [
-    { id: SideBar.Page.HOME, icon: _RES_ICON_("home") },
-    { id: SideBar.Page.USER, icon: _RES_ICON_("user") },
-    { id: SideBar.Page.FILE, icon: _RES_ICON_("file") },
-    { id: SideBar.Page.EMAIL, icon: _RES_ICON_("email") },
+    { id: ClientFF.Page.HOME, icon: _RES_ICON_("home") },
+    { id: ClientFF.Page.USER, icon: _RES_ICON_("user") },
+    { id: ClientFF.Page.FILE, icon: _RES_ICON_("file") },
+    { id: ClientFF.Page.EMAIL, icon: _RES_ICON_("email") },
   ]
   property var menuIcons: [
-    { id: SideBar.Menu.SHARE, icon: _RES_ICON_("share") },
-    { id: SideBar.Menu.SETTING, icon: _RES_ICON_("setting") },
+    { id: ClientFF.Menu.SHARE, icon: _RES_ICON_("share") },
+    { id: ClientFF.Menu.SETTING, icon: _RES_ICON_("setting") },
   ]
 
-  readonly property var curPage: SideBar.Page.HOME 
+  readonly property var curPage: ClientFF.Page.HOME
 
   signal clickPage(var pageId)
   signal clickMenu(var menuId)
@@ -46,7 +35,7 @@ Item {
 
   Rectangle {
     anchors.fill: parent
-    color: _COLOR_.getColor("bg_strong")
+    color: _THEME_.getColor("bg_strong")
   }
 
   Column {

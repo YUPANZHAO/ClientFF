@@ -1,16 +1,21 @@
 {
-  "theme": "#0099FF",
-  "empty": "transparent",
-  "bg": "#F8F8F8",
-  "bg_strong": "#F2F2F2",
-  "bg_light": "#FFFFFF",
-  "icon_bg_normal": "transparent",
-  "icon_bg_hover": "#E9E9E9",
-  "icon_bg_highlight": "#E0E0E0",
-  "red": "#C42B1C",
-  "red_strong": "#C70039",
-  "icon_normal": "#000000",
-  "icon_highlight": "#0099FF",
-  "white": "#FFFFFF",
-  "box_bg_color": "#F5F5F5"
+  "color": {
+    "theme": "#0099FF",
+    "empty": "transparent",
+    "bg": "#F8F8F8",
+    "bg_strong": "#F2F2F2",
+    "bg_light": "#FFFFFF",
+    "icon_bg_normal": "transparent",
+    "icon_bg_hover": "#E9E9E9",
+    "icon_bg_highlight": "#E0E0E0",
+    "red": "#C42B1C",
+    "red_strong": "#C70039",
+    "icon_normal": "#000000",
+    "icon_highlight": "#0099FF",
+    "white": "#FFFFFF",
+    "box_bg_color": "#F5F5F5",
+    "font": "#000000",
+    "font_light": "#999999",
+    "font_light_more": "#EEEEEE"
+  }
 }

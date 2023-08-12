@@ -12,12 +12,12 @@ Item {
   property var radius: 0
   property var isChecked: false
   property var showBg: true
-  property var normalBgColor: _COLOR_.getColor("icon_bg_normal")
-  property var hoverBgColor: _COLOR_.getColor("icon_bg_hover")
-  property var highlightBgColor: _COLOR_.getColor("icon_bg_highlight")
+  property var normalBgColor: _THEME_.getColor("icon_bg_normal")
+  property var hoverBgColor: _THEME_.getColor("icon_bg_hover")
+  property var highlightBgColor: _THEME_.getColor("icon_bg_highlight")
   property var showHighlight: false
-  property var iconNoramlColor: _COLOR_.getColor("icon_normal")
-  property var iconHighlightColor: _COLOR_.getColor("icon_highlight")
+  property var iconNoramlColor: _THEME_.getColor("icon_normal")
+  property var iconHighlightColor: _THEME_.getColor("icon_highlight")
 
   readonly property var isHover: area.containsMouse
   readonly property var isPressed: area.pressed

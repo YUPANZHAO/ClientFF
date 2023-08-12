@@ -8,7 +8,7 @@ Item {
   property var size: 30
   property var imageWidth: size
   property var imageHeight: size
-  property var color: _COLOR_.getColor("icon_normal")
+  property var color: _THEME_.getColor("icon_normal")
   property var showPointingHand: false
 
   signal clicked()

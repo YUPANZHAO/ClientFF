@@ -9,20 +9,20 @@ Item {
   property var radius: 4
   property var hPadding: 0
   property var vPadding: 0
-  property var hint: "请输入"
+  property var hint: ""
 
   width: 200
   height: 30
 
-  signal textEnd()
+  signal textEnd(var text)
 
   Rectangle {
     id: boxBg
     anchors.fill: parent
     radius: inputBox.radius
     border.width: 1
-    border.color: _COLOR_.getColor(textInput.focus ? "theme" : "empty")
-    color: _COLOR_.getColor("box_bg_color")
+    border.color: _THEME_.getColor(textInput.focus ? "theme" : "empty")
+    color: _THEME_.getColor("box_bg_color")
   }
 
   ImageSvg {
@@ -60,7 +60,7 @@ Item {
     onEditingFinished: {
       focus = false
     }
-    onAccepted: textEnd()
+    onAccepted: textEnd(textInput.text)
     background: null
     placeholderText: hint
   }

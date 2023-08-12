@@ -2,24 +2,24 @@ import QtQuick
 import QtQuick.Controls
 
 import "./config"
-import "./color"
+import "./theme"
 
 Item {
   id: utils
 
   readonly property var config: _config_
-  readonly property var color: _color_
+  readonly property var theme: _theme_
   
 
   Config {
     id: _config_
     
     onInitSuccess: {
-      utils.color.init()
+      utils.theme.init()
     }
   }
 
-  Color {
-    id: _color_
+  Theme {
+    id: _theme_
   }
 }

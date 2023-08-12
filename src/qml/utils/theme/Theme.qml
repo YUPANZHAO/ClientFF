@@ -1,10 +1,11 @@
 import QtQuick
 
 Item {
-  id: color
+  id: theme
   
   readonly property var themeFile: _CONFIG_.themeFile
-  property var metaData: null
+  readonly property var colorProperty: "color" 
+  property var metaData: null 
 
   function init() {
     try {
@@ -17,6 +18,6 @@ Item {
   }
 
   function getColor(name) {
-    return metaData[name]
+    return metaData[colorProperty][name]
   }
 }
