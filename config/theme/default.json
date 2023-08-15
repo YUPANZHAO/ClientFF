@@ -16,6 +16,8 @@
     "box_bg_color": "#F5F5F5",
     "font": "#000000",
     "font_light": "#999999",
-    "font_light_more": "#EEEEEE"
+    "font_light_more": "#EEEEEE",
+    "black": "#000000",
+    "border": "#CCCCCC"
   }
 }
