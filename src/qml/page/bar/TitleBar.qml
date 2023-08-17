@@ -1,5 +1,7 @@
 import QtQuick
 import QtQuick.Controls
+import QtQml
+import QtQuick.Window
 import org.wangwenx190.FramelessHelper
 
 import "../../component/button"
@@ -9,12 +11,24 @@ Item {
 
   readonly property var window: main
 
+  property var preWindowStatu: null
+
   width: parent.width
   height: 30
   anchors {
     top: parent.top
   }
   
+  Connections {
+    target: window
+    function onVisibilityChanged() {
+      if(window.visibility !== Window.Minimized && preWindowStatu === Window.Maximized) {
+        preWindowStatu = null
+        window.showMaximized()
+      }
+    }
+  }
+
   FramelessHelper.onReady: {
     FramelessHelper.setHitTestVisible(minimizeButton)
     FramelessHelper.setHitTestVisible(maximizeButton)
@@ -38,7 +52,10 @@ Item {
       width: size * 1.2
       icon: _RES_ICON_("window-minimize.svg")
       iconSize: 13
-      onClicked: window.showMinimized()
+      onClicked: {
+        preWindowStatu = window.visibility
+        window.showMinimized()
+      }
     }
     IconBtn {
       id: maximizeButton
