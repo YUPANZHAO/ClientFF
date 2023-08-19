@@ -7,14 +7,15 @@ Item {
   readonly property var colorProperty: "color" 
   property var metaData: null 
 
+  onThemeFileChanged: {
+    init()
+  }
+
   function init() {
     try {
       var content = file.readFile(themeFile)
       metaData = JSON.parse(content)
-      console.log("获取主题配置成功")
-    }catch(e) {
-      console.log("获取主题配置失败", e)
-    }
+    }catch(e) {}
   }
 
   function getColor(name) {

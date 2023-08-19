@@ -13,7 +13,7 @@ public:
 
 private:
   FileCtrl() = default;
-  FileCtrl(const FileCtrl &file) = default;
+  FileCtrl(const FileCtrl &) = default;
 
 public Q_SLOTS:
   QString readFile(const QString &fileUrl);

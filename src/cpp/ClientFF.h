@@ -3,6 +3,9 @@
 
 #include <QtQml/qqmlengine.h>
 
+#include "Config/Config.h"
+#include "File/FileCtrl.h"
+
 namespace ClientFF {
 
 void registerTypes(QQmlEngine *engine);

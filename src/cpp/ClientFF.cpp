@@ -1,5 +1,4 @@
 #include "ClientFF.h"
-#include "File/FileCtrl.h"
 #include <QQmlContext>
 
 namespace ClientFF {
@@ -9,6 +8,9 @@ void registerTypes(QQmlEngine *engine) {
 
   auto *file = File::FileCtrl::instance();
   root->setContextProperty("file", file);
+
+  auto *config = Config::Config::instance();
+  root->setContextProperty("globalConfig", config);
 }
 
 } // namespace ClientFF

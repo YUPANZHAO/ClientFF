@@ -13,7 +13,7 @@ file(GLOB_RECURSE CPP_FILES *.cpp *.h)
 # 开始生成qrc文件
 set(QRC_FIEL_NAME "res.qrc")
 set(QRC_FILE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/${QRC_FIEL_NAME}")
-file(WRITE ${QRC_FILE_PATH} "<RCC>\n\t<qresource prefix=\"/ClientFF/\">\n")
+file(WRITE ${QRC_FILE_PATH} "<RCC>\n\t<qresource prefix=\"/${PROJECT_NAME}/\">\n")
 
 # 获取QML和静态资源
 file(GLOB_RECURSE RES_PATHS *.qml *.png *.jpg *.svg *jpeg)
@@ -32,6 +32,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 qt_add_executable( ${PROJECT_NAME} WIN32
     ${CPP_FILES}
     ${QRC_FIEL_NAME}
+    ${EXEC_RES}
 )
 
 # 链接库

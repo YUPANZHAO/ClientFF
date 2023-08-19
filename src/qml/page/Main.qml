@@ -12,6 +12,7 @@ Window {
     { type: ClientFF.Page.HOME, page: "homepage/HomePage.qml" },
   ]
 
+  title: _CONFIG_.getConfig("app_name")
   width: 800
   height: 500
   minimumWidth: 700
