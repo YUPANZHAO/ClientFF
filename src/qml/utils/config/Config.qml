@@ -1,5 +1,4 @@
 import QtQuick
-import ClientFF
 
 Item {
   id: config

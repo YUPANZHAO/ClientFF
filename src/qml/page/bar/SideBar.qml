@@ -18,7 +18,7 @@ Item {
     { id: ClientFF.Menu.SETTING, icon: _RES_ICON_("setting") },
   ]
 
-  readonly property var curPage: ClientFF.Page.HOME
+  property var curPage: ClientFF.Page.HOME
 
   signal clickPage(var pageId)
   signal clickMenu(var menuId)
