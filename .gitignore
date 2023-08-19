@@ -3,3 +3,4 @@ build
 thirdlib
 *.zip
 .vscode
+src/res.qrc

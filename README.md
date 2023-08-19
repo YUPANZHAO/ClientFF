@@ -28,7 +28,7 @@
 cd D:\qt-everywhere-src-6.5.1
 
 # 编译配置
-configure -prefix E:\thirdlib\qt6.5.1_x86\ -debug-and-release -opensource
+configure -prefix E:\thirdlib\qt_6.5.1_x86\ -debug-and-release -opensource
 
 # 编译源码
 cmake --build . --parallel
@@ -40,12 +40,12 @@ cmake --install .
 # -- Install configuration: "Debug"
 # CMake Error at qtbase/cmake_install.cmake:41 (file):
 #   file cannot create directory:
-#   E:/thirdlib/qt6.5.1_x86;D:/qt-everywhere-src-6.5.1/
+#   E:/thirdlib/qt_6.5.1_x86;D:/qt-everywhere-src-6.5.1/
 # -debug-and-release/lib/cmake/Qt6BuildInternals.
 #   Maybe need administrative privileges.
 # Call Stack (most recent call first):
 # cmake_install.cmake:42 (include)
-cmake --install . --prefix E:\thirdlib\qt6.5.1_x86
+cmake --install . --prefix E:\thirdlib\qt_6.5.1_x86
 ```
 
 ### FramelessHelper
@@ -57,7 +57,7 @@ git clone --recursive https://github.com/wangwenx190/framelesshelper.git
 cd framelesshelper
 mkdir build
 cd build
-cmake -DQt6_DIR=E:\thirdlib\qt6.5.1_x86\lib\cmake\Qt6 -DCMAKE_INSTALL_PREFIX=E:\thirdlib\framelesshelper -DCMAKE_BUILD_TYPE=Release -GNinja ..
+cmake -DQt6_DIR=E:\thirdlib\qt_6.5.1_x86\lib\cmake\Qt6 -DCMAKE_INSTALL_PREFIX=E:\thirdlib\framelesshelper_2.4.2_x86 -DCMAKE_BUILD_TYPE=Release -GNinja ..
 cmake --build . --config Release --target all --parallel
 cmake --install . --config Release --strip
 ```
@@ -76,7 +76,7 @@ mklink /J E:\project\ClientFF\thirdlib E:\thirdlib
 
 ### 环境变量
 
-项目编译好后的可执行文件执行需要链接 `Qt` 的一些动态库，若采用 `cmake` 去拷贝到同级目录，既延长了编译时间又产生不必要的空间浪费，所以需将第三方库 `thirdlib` 中的 `qt6.5.1_x86/bin` 目录添加到系统的环境变量 `PATH` 中，其他第三方库同理。
+项目编译好后的可执行文件执行需要链接 `Qt` 的一些动态库，若采用 `cmake` 去拷贝到同级目录，既延长了编译时间又产生不必要的空间浪费，所以需将第三方库 `thirdlib` 中的 `qt_6.5.1_x86/bin` 目录添加到系统的环境变量 `PATH` 中，其他第三方库同理。
 
 ## 编译运行
 
