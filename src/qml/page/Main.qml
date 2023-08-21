@@ -4,6 +4,7 @@ import org.wangwenx190.FramelessHelper
 
 import "./bar"
 import "../../qml"
+import "../component/box"
 
 Window {
   id: main
@@ -64,5 +65,9 @@ Window {
 
   SideBar {
     id: sideBar
+  }
+
+  FixedConfirmBox {
+    id: fixedConfirmBox
   }
 }
