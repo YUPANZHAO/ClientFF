@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Layouts
+import org.wangwenx190.FramelessHelper
 
 import "../../../qml"
 import "../../component/button"
@@ -67,23 +68,33 @@ Item {
   Component {
     id: pageIconDelegate
     IconBtn {
+      id: pageIcon
       size: 40
       radius: 8
       icon: modelData.icon
       showHighlight: true
       isChecked: curPage === modelData.id
       onClicked: clickPage(modelData.id)
+
+      Component.onCompleted: {
+        FramelessHelper.setHitTestVisible(pageIcon)
+      }
     }
   }
 
   Component {
     id: menuIconDelegate
     IconBtn {
+      id: menuItem
       size: 40
       icon: modelData.icon
       showBg: false
       showHighlight: true
       onClicked: clickMenu(modelData.id)
+
+      Component.onCompleted: {
+        FramelessHelper.setHitTestVisible(menuItem)
+      }
     }
   }
 }

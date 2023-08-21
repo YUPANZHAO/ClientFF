@@ -4,6 +4,7 @@ import org.wangwenx190.FramelessHelper
 
 import "./bar"
 import "../../qml"
+import "../component/box"
 
 Window {
   id: main
@@ -26,13 +27,11 @@ Window {
     anchors.fill: parent
     focusPolicy: Qt.ClickFocus
   }
-
-  FramelessHelper.onReady: {
-    FramelessHelper.moveWindowToDesktopCenter()
-    FramelessHelper.setTitleBarItem(titleBar)
-    main.show()
-  }
     
+  FramelessHelper.onReady: {
+    FramelessHelper.setHitTestVisible(content)
+  }
+
   Item {
     id: content
     
@@ -64,5 +63,9 @@ Window {
 
   SideBar {
     id: sideBar
+  }
+
+  FixedConfirmBox {
+    id: fixedConfirmBox
   }
 }
