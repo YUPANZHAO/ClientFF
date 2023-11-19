@@ -1,7 +1,6 @@
 import QtQuick
 
 import "../../../qml"
-import "../../component/input"
 
 Item {
   id: homepage

@@ -4,13 +4,13 @@ import org.wangwenx190.FramelessHelper
 
 import "./bar"
 import "../../qml"
-import "../component/box"
 
 Window {
   id: main
 
   property var pages: [
     { type: ClientFF.Page.HOME, page: "homepage/HomePage.qml" },
+    { type: ClientFF.Page.FILE, page: "filepage/FilePage.qml" },
   ]
 
   title: _CONFIG_.getConfig("app_name")
@@ -63,9 +63,5 @@ Window {
 
   SideBar {
     id: sideBar
-  }
-
-  FixedConfirmBox {
-    id: fixedConfirmBox
   }
 }
