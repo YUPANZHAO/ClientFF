@@ -9,6 +9,9 @@ Switch {
     property var btnHeight: 20
     property var animaDuration: 200
 
+    width: btnWidth
+    height: btnHeight
+
     indicator: Rectangle {
         width: btnWidth
         height: btnHeight
@@ -21,7 +24,7 @@ Switch {
         }
 
         ColorAnimation on color {
-            to: _THEME_.getColor("box_bg_color")
+            to: _THEME_.getColor("box_bg_color_highlight")
             running: !switchBtn.checked
             duration: animaDuration / 2
         }

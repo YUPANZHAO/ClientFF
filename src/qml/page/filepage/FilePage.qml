@@ -115,6 +115,18 @@ Item {
 			EasyComboBox {
 				id: easyComboBox
 			}
+
+
+			Row {
+				spacing: 30
+				EasyCheckBox {
+					id: easyCheckBox1
+				}
+				EasyCheckBox {
+					id: easyCheckBox2
+					boxRadius: boxSize / 2
+				}
+			}
 		}
 	}
 }
