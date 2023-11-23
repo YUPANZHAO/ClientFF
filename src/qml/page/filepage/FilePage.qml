@@ -107,6 +107,14 @@ Item {
 				}
 				EasyMenuItem { text: "菜单项 5" }
 			}
+
+			SwitchBtn {
+				id: switchBtn
+			}
+
+			EasyComboBox {
+				id: easyComboBox
+			}
 		}
 	}
 }
