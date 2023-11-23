@@ -22,11 +22,6 @@ Window {
   function changePage(pageId) {
     sideBar.clickPage(pageId)
   }
-
-  Pane {
-    anchors.fill: parent
-    focusPolicy: Qt.ClickFocus
-  }
     
   FramelessHelper.onReady: {
     FramelessHelper.setHitTestVisible(content)

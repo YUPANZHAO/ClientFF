@@ -5,33 +5,23 @@ import "../../component/box"
 import "../../component/button"
 import "../../component/input"
 import "../../component/menu"
+import "../../component/slider"
 import "../../component/text"
 
 Item {
-  id: filepage
+  	id: filepage
 
 	ScrollView {
 		id: scrollview
 		anchors.fill: parent
-		
-		ScrollBar.vertical: ScrollBar{ opacity: 0; width: 0 }
-		ScrollBar.horizontal: ScrollBar{ opacity: 0; height: 0 }
-		focusPolicy: Qt.ClickFocus
 
-		Pane {
-			anchors.fill: parent
-			focusPolicy: Qt.ClickFocus
-			opacity: 0
-		}
+		ScrollBar.vertical.policy: ScrollBar.AlwaysOff
+		ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
+		focusPolicy: Qt.ClickFocus
 		
 		Column {
 			spacing: 20
-			anchors {
-				left: parent.left
-				top: parent.top
-				leftMargin: 20
-				topMargin: 20
-			}
+			padding: 20
 
 			EasyBtn {
 				id: easyBtn
@@ -126,6 +116,15 @@ Item {
 					id: easyCheckBox2
 					boxRadius: boxSize / 2
 				}
+			}
+
+			EasySlider {
+				id: easySlider1
+			}
+			
+			EasySlider {
+				id: easySlider2
+				orientation: Qt.Vertical
 			}
 		}
 	}
