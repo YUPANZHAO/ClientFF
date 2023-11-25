@@ -21,6 +21,8 @@
     "black": "#000000",
     "border": "#CCCCCC",
     "border_light": "#DEDEDE",
-    "shadow": "#DDDDDD"
+    "shadow": "#DDDDDD",
+    "tip_info_color": "#40A507",
+    "tip_warn_color": "#FF5967"
   }
 }

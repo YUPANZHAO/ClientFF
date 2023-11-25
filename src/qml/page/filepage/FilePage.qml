@@ -26,7 +26,7 @@ Item {
 			EasyBtn {
 				id: easyBtn
 				text: "点击我"
-				onClickedBtn: fixedConfirmBox.confirm("你点击了一次按钮。")
+				onClickedBtn: tipBox.tip("你点击了一次按钮")
 			}
 
 			FixedConfirmBox {
@@ -92,6 +92,8 @@ Item {
 						text: easyMenu.showItem3 ? "隐藏菜单项3" : "显示菜单项3"
 						onTriggered: {
 							easyMenu.showItem3 = !easyMenu.showItem3
+							if(easyMenu.showItem3) tipBox.info("菜单项3已显示")
+							else tipBox.info("菜单项3已隐藏")
 						}
 					}
 				}
@@ -100,12 +102,15 @@ Item {
 
 			SwitchBtn {
 				id: switchBtn
+				onCheckedChanged: {
+					if(checked) tipBox.info("开光状态: ON")
+					else tipBox.warn("开光状态: OFF")
+				}
 			}
 
 			EasyComboBox {
 				id: easyComboBox
 			}
-
 
 			Row {
 				spacing: 30
@@ -127,5 +132,10 @@ Item {
 				orientation: Qt.Vertical
 			}
 		}
+	}
+	
+	TipBox {
+		id: tipBox
+		anchors.fill: parent
 	}
 }
