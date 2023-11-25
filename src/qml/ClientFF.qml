@@ -11,7 +11,8 @@ Item {
   
   enum Menu {
     SETTING,
-    SHARE
+    SHARE,
+    SKIN
   }
 
 }

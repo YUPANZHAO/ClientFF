@@ -27,11 +27,11 @@ Item {
     }
 
     function info(text) {
-        tip(text, _RES_ICON_("tip-info.svg"), tipTextSize, _THEME_.getColor("tip_info_color"))
+        tip(text, _RES_ICON_("tip-info"), tipTextSize, _THEME_.getColor("tip_info_color"))
     }
 
     function warn(text) {
-        tip(text, _RES_ICON_("tip-warn.svg"), tipTextSize, _THEME_.getColor("tip_warn_color"))
+        tip(text, _RES_ICON_("tip-warn"), tipTextSize, _THEME_.getColor("tip_warn_color"))
     }
 
     ListModel {

@@ -58,5 +58,15 @@ Window {
 
   SideBar {
     id: sideBar
+    onClickMenu: (menuId) => {
+      switch(menuId) {
+      case ClientFF.Menu.SKIN: changeSkin(); break;
+      }
+    }
+  }
+
+  function changeSkin() {
+    if(_THEME_.name == "light") _THEME_.changeTheme("dark")
+    else if(_THEME_.name == "dark") _THEME_.changeTheme("light")
   }
 }

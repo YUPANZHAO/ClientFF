@@ -16,17 +16,22 @@ Switch {
         width: btnWidth
         height: btnHeight
         radius: height / 2
+        color: _THEME_.getColor("box_bg_color_highlight")
 
-        ColorAnimation on color {
-            to: _THEME_.getColor("theme")
-            running: switchBtn.checked
-            duration: animaDuration / 2
-        }
-
-        ColorAnimation on color {
-            to: _THEME_.getColor("box_bg_color_highlight")
-            running: !switchBtn.checked
-            duration: animaDuration / 2
+        Rectangle {
+            anchors.fill: parent
+            color: _THEME_.getColor("theme")
+            radius: height / 2
+            NumberAnimation on opacity {
+                to: 1
+                running: switchBtn.checked
+                duration: animaDuration / 2
+            }
+            NumberAnimation on opacity {
+                to: 0
+                running: !switchBtn.checked
+                duration: animaDuration / 2
+            }
         }
         
         Rectangle {

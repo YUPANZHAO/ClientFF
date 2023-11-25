@@ -9,7 +9,7 @@ CheckBox {
 
     property var boxSize: 16
     property var boxRadius: 4
-    property var boxIcon: _RES_ICON_("hook.svg")
+    property var boxIcon: _RES_ICON_("hook")
 
     width: boxSize
     height: width
@@ -19,16 +19,22 @@ CheckBox {
         width: boxSize
         height: width
         radius: boxRadius
+        color: _THEME_.getColor("box_bg_color")
 
-        ColorAnimation on color {
-            to: _THEME_.getColor("theme")
-            running: checkBox.checked
-            duration: 100
-        }
-        ColorAnimation on color {
-            to: _THEME_.getColor("box_bg_color")
-            running: !checkBox.checked
-            duration: 100
+        Rectangle {
+            anchors.fill: parent
+            radius: parent.radius
+            color: _THEME_.getColor("theme")
+            NumberAnimation on opacity {
+                to: 1
+                running: checkBox.checked
+                duration: 100
+            }
+            NumberAnimation on opacity {
+                to: 0
+                running: !checkBox.checked
+                duration: 100
+            }
         }
         border {
             width: checkBox.checked ? 0 : 1

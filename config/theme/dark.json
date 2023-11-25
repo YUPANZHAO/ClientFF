@@ -1,0 +1,33 @@
+{
+  "info": {
+    "name": "dark"
+  },
+  "color": {
+    "theme": "#F54900",
+    "empty": "transparent",
+    "bg": "#1B1B1B",
+    "bg_strong": "#2C2C2C",
+    "bg_light": "#222222",
+    "icon_bg_normal": "transparent",
+    "icon_bg_hover": "#343434",
+    "icon_bg_highlight": "#383838",
+    "red": "#C42B1C",
+    "red_strong": "#C70039",
+    "icon_normal": "#AEAEAE",
+    "icon_highlight": "#F54900",
+    "white": "#FFFFFF",
+    "box_bg_color": "#282828",
+    "box_bg_color_highlight": "#151515",
+    "font": "#E8E8E8",
+    "font_light": "#808080",
+    "font_light_more": "#606060",
+    "black": "#000000",
+    "border": "#CCCCCC",
+    "border_light": "#F54900",
+    "shadow": "#151515",
+    "tip_info_color": "#40A507",
+    "tip_warn_color": "#FF5967",
+    "menu_frame_line": "#282828",
+    "menu_separator_line": "#DEDEDE"
+  }
+}

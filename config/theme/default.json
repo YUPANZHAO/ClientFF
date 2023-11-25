@@ -1,4 +1,7 @@
 {
+  "info": {
+    "name": "light"
+  },
   "color": {
     "theme": "#0099FF",
     "empty": "transparent",
@@ -23,6 +26,8 @@
     "border_light": "#DEDEDE",
     "shadow": "#DDDDDD",
     "tip_info_color": "#40A507",
-    "tip_warn_color": "#FF5967"
+    "tip_warn_color": "#FF5967",
+    "menu_frame_line": "#DEDEDE",
+    "menu_separator_line": "#DEDEDE"
   }
 }

@@ -44,7 +44,7 @@ Window {
       rightMargin: closeBtnRightPadding
     }
     size: closeBtnSize
-    icon: _RES_ICON_("window-close.svg")
+    icon: _RES_ICON_("window-close")
     radius: 4
     onClicked: fixedWindowBox.close()
     z: 2

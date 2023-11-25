@@ -33,7 +33,7 @@ Item {
       rightMargin: 9
     }
     visible: textInput.length > 0
-    image: _RES_ICON_("window-close.svg")
+    image: _RES_ICON_("window-close")
     size: 7
     showPointingHand: true
     onClicked: textInput.clear()
@@ -63,5 +63,7 @@ Item {
     onAccepted: textEnd(textInput.text)
     background: null
     placeholderText: hint
+    placeholderTextColor: _THEME_.getColor("font_light")
+    color: _THEME_.getColor("font")
   }
 }

@@ -52,7 +52,7 @@ ComboBox {
 
         ImageSvg {
             id: arrowImg
-            image: _RES_ICON_("arrow.svg")
+            image: _RES_ICON_("arrow")
             size: boxHeight * 0.3
             rotation: 90
             anchors {
@@ -134,7 +134,7 @@ ComboBox {
 
                     ImageSvg {
                         id: hookImg
-                        image: _RES_ICON_("hook.svg")
+                        image: _RES_ICON_("hook")
                         size: itemHeight * 0.3
                         visible: comboBox.currentIndex == index
                         anchors {

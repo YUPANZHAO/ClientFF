@@ -10,7 +10,7 @@ Menu {
   property var menuWidth: 130
   property var itemHeight: 34
   property var bgColor: _THEME_.getColor("bg_light")
-  property var borderColor: _THEME_.getColor("border_light")
+  property var borderColor: _THEME_.getColor("menu_frame_line")
   property var itemBgColor: _THEME_.getColor("box_bg_color")
   property var itemBgColorHighlight: _THEME_.getColor("box_bg_color_highlight")
   property var borderWidth: 1
@@ -66,7 +66,7 @@ Menu {
 
     arrow: ImageSvg {
       size: 8
-      image: _RES_ICON_("arrow.svg")
+      image: _RES_ICON_("arrow")
       visible: menuItem.subMenu
       anchors {
         right: bgRec.right

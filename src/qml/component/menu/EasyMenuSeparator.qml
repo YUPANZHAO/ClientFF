@@ -11,6 +11,6 @@ MenuSeparator {
 
   contentItem: Rectangle {
     implicitHeight: 1
-    color: _THEME_.getColor("border_light")
+    color: _THEME_.getColor("menu_separator_line")
   }
 }

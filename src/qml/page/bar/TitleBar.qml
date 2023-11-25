@@ -50,7 +50,7 @@ Item {
       id: minimizeButton
       size: parent.height
       width: size * 1.2
-      icon: _RES_ICON_("window-minimize.svg")
+      icon: _RES_ICON_("window-minimize")
       iconSize: 13
       onClicked: {
         preWindowStatu = window.visibility
@@ -77,7 +77,7 @@ Item {
       width: size * 1.2
       hoverBgColor: _THEME_.getColor("red")
       highlightBgColor: _THEME_.getColor("red_strong")
-      icon: _RES_ICON_("window-close.svg")
+      icon: _RES_ICON_("window-close")
       iconSize: 10
       onClicked: {
         window.close()
