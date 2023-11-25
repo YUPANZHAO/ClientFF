@@ -18,6 +18,7 @@ private:
 public Q_SLOTS:
   QString readFile(const QString &fileUrl);
   bool writeFile(const QString &fileUrl, const QString &content);
+  QString tempDir();
 };
 
 } // namespace ClientFF::File

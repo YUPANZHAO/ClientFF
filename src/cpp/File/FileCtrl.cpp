@@ -1,6 +1,7 @@
 #include "FileCtrl.h"
 #include <QFile>
 #include <QTextStream>
+#include <QDir>
 
 namespace ClientFF::File {
 
@@ -27,6 +28,10 @@ bool FileCtrl::writeFile(const QString &fileUrl, const QString &content) {
   out << content;
   file.close();
   return true;
+}
+
+QString FileCtrl::tempDir() {
+  return QDir::tempPath();
 }
 
 } // namespace ClientFF::File

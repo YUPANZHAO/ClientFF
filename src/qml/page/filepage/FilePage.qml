@@ -103,8 +103,8 @@ Item {
 			SwitchBtn {
 				id: switchBtn
 				onCheckedChanged: {
-					if(checked) tipBox.info("开光状态: ON")
-					else tipBox.warn("开光状态: OFF")
+					if(checked) tipBox.info("开关状态: ON")
+					else tipBox.warn("开关状态: OFF")
 				}
 			}
 

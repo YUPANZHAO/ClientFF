@@ -15,7 +15,7 @@ Item {
     { id: ClientFF.Page.EMAIL, icon: _RES_ICON_("email") },
   ]
   property var menuIcons: [
-    { id: ClientFF.Menu.SKIN, icon: _RES_ICON_(_THEME_.name == "dark" ? "moon":"sunshine") },
+    { id: ClientFF.Menu.SKIN, icon: _RES_ICON_(_THEME_.name == "dark" ? "sunshine":"moon") },
     { id: ClientFF.Menu.SHARE, icon: _RES_ICON_("share") },
     { id: ClientFF.Menu.SETTING, icon: _RES_ICON_("setting") },
   ]

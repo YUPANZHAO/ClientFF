@@ -4,6 +4,7 @@ import org.wangwenx190.FramelessHelper
 
 import "./bar"
 import "../../qml"
+import "../component/box"
 
 Window {
   id: main
@@ -28,45 +29,57 @@ Window {
   }
 
   Item {
-    id: content
-    
-    anchors {
-      left: sideBar.right
-      right: parent.right
-      top: titleBar.bottom
-      bottom: parent.bottom
-    }
-    
-    Rectangle {
-      anchors.fill: parent
-      color: _THEME_.getColor("bg_light")
-    }
+    id: mainContent
+    anchors.fill: parent
 
-    Repeater {
-      model: pages
-      delegate: Loader {
+    Item {
+      id: content
+      
+      anchors {
+        left: sideBar.right
+        right: parent.right
+        top: titleBar.bottom
+        bottom: parent.bottom
+      }
+      
+      Rectangle {
         anchors.fill: parent
-        source: modelData.page
-        visible: sideBar.curPage === modelData.type
+        color: _THEME_.getColor("bg_light")
+      }
+
+      Repeater {
+        model: pages
+        delegate: Loader {
+          anchors.fill: parent
+          source: modelData.page
+          visible: sideBar.curPage === modelData.type
+        }
       }
     }
-  }
-  
-  TitleBar {
-    id: titleBar
+    
+    TitleBar {
+      id: titleBar
+    }
+
+    SideBar {
+      id: sideBar
+      onClickMenu: (menuId) => {
+        switch(menuId) {
+        case ClientFF.Menu.SKIN: changeSkin(); break;
+        }
+      }
+    }
   }
 
-  SideBar {
-    id: sideBar
-    onClickMenu: (menuId) => {
-      switch(menuId) {
-      case ClientFF.Menu.SKIN: changeSkin(); break;
-      }
-    }
+  SkinMagicBox {
+    id: skinMagicBox
+    anchors.fill: parent
   }
 
   function changeSkin() {
-    if(_THEME_.name == "light") _THEME_.changeTheme("dark")
-    else if(_THEME_.name == "dark") _THEME_.changeTheme("light")
+    skinMagicBox.magic(mainContent, 30, main.height - 120, () => {
+      if(_THEME_.name == "light") _THEME_.changeTheme("dark")
+      else if(_THEME_.name == "dark") _THEME_.changeTheme("light")
+    })
   }
 }
