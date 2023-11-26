@@ -10,7 +10,7 @@ FRAMELESSHELPER_USE_NAMESPACE
 int main(int argc, char *argv[]) {
   FramelessHelper::Quick::initialize();
 
-  FramelessConfig::instance()->set(Global::Option::ForceHideWindowFrameBorder);
+  // FramelessConfig::instance()->set(Global::Option::ForceHideWindowFrameBorder);
 
   QGuiApplication app(argc, argv);
 

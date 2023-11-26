@@ -16,7 +16,7 @@ Item {
 
   onThemeChanged: {
     if(!isRuning) return
-    animaTimer.restart()
+    anima()
   }
 
   Image {
@@ -29,23 +29,9 @@ Item {
     onStatusChanged: {
       if(status == Image.Ready) {
         isMask = true
-        handleTimer.restart()
+        handle()
       }
     } 
-  }
-
-  Timer {
-    id: handleTimer
-    interval: 100
-    running: false
-    onTriggered: handle()
-  }
-
-  Timer {
-    id: animaTimer
-    interval: 100
-    running: false
-    onTriggered: anima()
   }
 
   Item {
